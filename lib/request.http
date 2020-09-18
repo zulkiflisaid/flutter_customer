@@ -1,0 +1,132 @@
+########daftar192.168.1.2
+POST http://192.168.1.44:8080/getalltopup?page=1&limit=10 HTTP/1.1
+User-Agent: rest-client
+Accept-Language: en-GB,en-US;q=0.8,en;q=0.6,zh-CN;q=0.4
+Content-Type: application/json
+Authorization:  "Bearer {{myRequest.response.body.token}}"
+
+{   
+    "name": "password", 
+}
+
+########daftar192.168.1.2
+POST http://192.168.1.44:8080/register HTTP/1.1
+User-Agent: rest-client
+Accept-Language: en-GB,en-US;q=0.8,en;q=0.6,zh-CN;q=0.4
+Content-Type: application/json
+
+{   
+    "name": "password",
+    "email": "dripasswrordver@driver.com",
+    "phone_number": "123r45678901",
+    "password": "passwrord",
+    "password_confirmation": "parssword"
+}
+
+########pin
+POST http://192.168.1.44:8080/validasiregister HTTP/1.1
+Content-Type: application/json 
+
+{   
+    "phone_id": "+62", 
+    "phone_number": 44223354322,
+    "typeuser": "customer"
+}
+
+########login
+# @name myRequest
+POST http://192.168.1.44:8080/login HTTP/1.1
+Content-Type: application/json 
+  
+{
+    "usertype": "customer",
+    "phone_id": "+62",
+    "phone_number": 82256330208,
+    "password": "password",
+    "gcm":"exZ4pp8Y6lc:APA91bHtfRoD2p7s9c5vW2wJ9vdzz0yr9y3OJQm3biadhA71_yFFfYpaDYLydIDdFoyCqVqanG_hn1X6vK4kXfYV3vRbH2XIFTiY7YzyrXfuwidzwiQ_Gkf9Gdhd_BuFfVfNi2Dc5e0e"
+    //"refresh":"chSaisNXME0:APA91bG2DY1bAi28mBEfDVcNyAjpCV6vYdCOfVKytyxO2af9-t65plPOAi2D36PKAVx9XCNFRWzVSo4AxYSyi1pO6db0WRpkm809M5zeuqgBi1RSCHIjFDOKyADLXQj-wSPt9XIIp67V"
+}
+
+######## promotion
+GET http://192.168.1.44:8080/imgtopup?kd=FE78143508975&id=1 HTTP/1.1
+Content-type: "application/json",
+Accept: "application/json",
+Authorization: "{{myRequest.response.body.token}}"
+
+
+########me
+POST http://192.168.1.44:8080/getalldriverprice?page=1&limit=10 HTTP/1.1
+Content-Type: application/json
+Authorization:  "{{myRequest.response.body.token}}"
+
+{
+   // "phone_number": "44253354311",
+   // "password": "password"
+}
+
+
+########logout
+POST http://192.168.1.44:8080/logout HTTP/1.1
+Content-Type: application/json
+Authorization:  "Bearer {{myRequest.response.body.access_token}}"
+
+########refresh
+POST http://192.168.1.44:8080/refresh HTTP/1.1
+Content-Type: application/json
+Authorization:  "Bearer {{myRequest.response.body.access_token}}"
+
+
+########users
+GET http://192.168.1.44:8080/users HTTP/1.1
+Content-Type: application/json
+Authorization:  "Bearer {{myRequest.response.body.access_token}}"
+
+
+########refresh
+POST http://localhost/webku/ojek_online/gcm_ojek/public/api/v1/refresh HTTP/1.1
+Content-Type: application/json
+Authorization:  "Bearer {{myRequest.response.body.access_token}}"
+
+
+########gojekprice
+POST http://192.168.1.44:8080/gojekprice HTTP/1.1
+Content-Type: application/json
+Authorization:  "Bearer {{myRequest.response.body.access_token}}"
+ 
+{
+    "prov_1": "SulawesiBarat91353",
+    "prov_2": "SulawesiBarat91353",
+    "origin_lat": "-3.4798748637270114",
+    "origin_long": "119.14480838924646",
+    "destination_lat": "-3.4779221326351752",
+    "destination_long": "119.14588630199432",
+    "category_driver": "motorcycle",
+    "pay_categories": "cash",
+    "jemput_judul": "jemput_judul",
+    "jemput_alamat": "jemput_alamat",
+    "jemput_ket": "jemput_ket",
+    "tujuan_judul": "tujuan_judul",
+    "tujuan_alamat": "tujuan_alamat"
+}
+
+
+########gojekorder
+POST http://localhost/webku/ojek_online/gcm_ojek/public/api/v1/gojekorder HTTP/1.1
+Content-Type: application/json
+Authorization:  "Bearer {{myRequest.response.body.token}}"
+ 
+{
+    "order":"70efdf2ec9b086079795c442636b55fb"
+}
+######## cancel order
+POST http://192.168.1.44:8080/cancelordergojek?id=62&cancelid=0&codetran=EB93811020991 HTTP/1.1
+Content-Type: application/json
+Authorization:  "{{myRequest.response.body.token}}"
+
+
+######## inbox
+GET https://maps.googleapis.com/maps/api/directions/json?mode=driving&key=AIzaSyA706610W0aD4w2ueNR6seGrlHj5SpYOyM&origin=-3.4798748637270114,119.14480838924646&destination=-3.4877851401789086,119.13311026990414 HTTP/1.1
+Content-Type: application/json
+Authorization:  "Bearer {{myRequest.response.body.token}}"
+ 
+

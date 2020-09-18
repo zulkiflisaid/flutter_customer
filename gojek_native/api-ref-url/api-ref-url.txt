@@ -1,0 +1,245 @@
+http://localhost:8080/register
+{ 
+	"gcm":"driver",
+	"kat":"motor",
+	"name": "name",
+	"email":"adaa@driver.com",
+	"phone_number":82256330205
+	"phone_id":	"+62",
+	"password":"password"
+}
+
+
+http://localhost:8080/validasi
+
+
+http://localhost:8080/login
+{
+	"kat":"admin" ,  
+	"gcm":"gcm" ,  
+	"email":"a@admin.com" ,
+	"password":"password" 
+ }
+
+
+//customer
+http://localhost:8080deletecustomer
+
+http://localhost:8080/getcustomerbyid
+
+http://localhost:8080/getallcustomer
+
+
+
+//driver
+http://localhost:8080/deletedriver
+
+http://localhost:8080/getdriverbyid
+
+http://localhost:8080/getalldriver
+
+
+
+//bank
+http://localhost:8080/addbank
+
+
+http://localhost:8080/updatebank
+
+
+http://localhost:8080/deletebank
+
+http://localhost:8080/getbankbyid
+
+http://localhost:8080/getallbank
+
+
+//driverprice
+http://localhost:8080/adddriverprice
+
+http://localhost:8080/updatedriverprice
+
+http://localhost:8080/deletedriverprice
+
+http://localhost:8080/getdriverpricebyid
+
+http://localhost:8080/getalldriverprice
+
+
+//getallgcm
+http://localhost:8080/addgcm
+
+http://localhost:8080/updategcm
+
+http://localhost:8080/deletegcm
+
+
+http://localhost:8080/getgcmbyid
+
+http://localhost:8080/getallgcm
+
+
+//admin
+http://localhost:8080/addadmin 
+http://localhost:8080/updateadmin 
+http://localhost:8080/deleteadmin 
+http://localhost:8080/getadminbyid 
+http://localhost:8080/getalladmin 
+
+//restaurant
+http://localhost:8080/addresto 
+http://localhost:8080/updateresto 
+http://localhost:8080/deleterestot 
+http://localhost:8080/getrestobyid 
+http://localhost:8080/getallresto 
+//category_food
+http://localhost:8080/addcategoryfood 
+http://localhost:8080/updatecategoryfood 
+http://localhost:8080/deletecategoryfood 
+http://localhost:8080/getcategoryfoodbyid 
+http://localhost:8080/getallcategoryfood 
+
+//Cook
+http://localhost:8080/addcook 
+http://localhost:8080/updatecook 
+http://localhost:8080/deletecook 
+http://localhost:8080/getcookyid 
+http://localhost:8080/getallcook 
+
+//AddCategoryCook
+http://localhost:8080/addcategorycook
+
+http://localhost:8080/updatecategorycook
+
+http://localhost:8080/deletecategorycook
+
+http://localhost:8080/getcategorycookbyid
+
+http://localhost:8080/getallcategorycook
+
+
+//Shop
+http://localhost:8080/addshop
+
+http://localhost:8080/updateshop
+
+http://localhost:8080/deleteshop
+
+http://localhost:8080/getshopyid
+
+http://localhost:8080/getallshop
+
+//AddCategoryShop
+http://localhost:8080/addcategoryshop
+
+http://localhost:8080/updatecategoryshop
+
+http://localhost:8080/deletecategoryshop
+
+http://localhost:8080/getcategoryshopbyid
+
+http://localhost:8080/getallcategoryshop
+
+
+//Inbox
+http://localhost:8080/addinbox
+
+http://localhost:8080/updateinbox
+
+http://localhost:8080/deleteinbox
+
+http://localhost:8080/getinboxbyid
+
+http://localhost:8080/getallinbox
+
+
+//itemgood
+http://localhost:8080/additemgood
+
+http://localhost:8080/updateitemgood
+
+http://localhost:8080/deleteitemgood
+
+http://localhost:8080/getitemgoodbyid
+
+http.HandleFunc("//getallitemgood
+
+//itemcook
+http://localhost:8080/additemcook
+
+http://localhost:8080/updateitemcook
+
+http://localhost:8080/deleteitemcook
+
+http://localhost:8080/getitemcookbyid
+
+http://localhost:8080/getallitemcook
+
+//itemshop
+http://localhost:8080/additemshop
+
+http://localhost:8080/updateitemshop
+
+http://localhost:8080/deleteitemshop
+
+http://localhost:8080/getitemshopbyid
+
+http://localhost:8080/getallitemshop
+
+
+//################################################
+//transaksi
+//################################################
+//topup
+http://localhost:8080/addtopup
+
+http://localhost:8080/addbuktitopup
+
+http://localhost:8080/imgtopup
+
+http://localhost:8080/deletetopup
+
+http://localhost:8080/gettopupbyid
+
+http://localhost:8080/getalltopup
+
+//transaksi ojek
+http://localhost:8080/getpricerute
+
+http://localhost:8080/newordergojek
+{   
+	"id":3,
+	"user_id":1, 
+	"category_driver":"motor", 
+	"pay_category":"tunai",
+	"charge":1,
+	"point_transaction":1, 
+	"total_prices":4000,
+	"driver_id":0,
+	"duration_value":1,
+	"distance_value":1, 
+	"jemput_lat": -3.464214,
+	"jemput_long":119.140585,
+	"tujuan_lat":-3.481263,
+	"tujuan_long":119.141014,
+	"tujuan_alamat":"1",
+	"tujuan_judul":"1",
+	"distance_text":"1",
+	"duration_text":"1",
+	"jemput_alamat":"1",
+	"jemput_judul":"1",
+	"jemput_ket":"1",
+	"polyline":"1",  
+}
+
+
+
+http://localhost:8080/cancelordergojek
+
+http://localhost:8080/acceptordergojek
+
+http://localhost:8080/finishordergojek
+
+http://localhost:8080/getorderojekbyid
+
+http://localhost:8080/getorderojekall

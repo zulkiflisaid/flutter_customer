@@ -1,0 +1,19 @@
+ /*void createRecord() async {
+    await databaseReference
+        .collection('chat_ojek') 
+        .document('kode_order')
+        .collection('chat')
+        .document(DateTime.now().millisecondsSinceEpoch.toString())
+        .setData({
+          'title': 'Mastering Flutter',
+          'description': 'Programming Guide for Dart'
+        });
+
+       DocumentReference ref = await databaseReference.collection('chat_ojek')
+        .add({
+          'title': 'Flutter in Action',
+          'description': 'Complete Programming Guide to learn Flutter'
+        }); 
+    //print(ref.documentID);
+  } */
+  

@@ -1,0 +1,184 @@
+-3.4798748637270114,119.14480838924646
+-3.4843147601261544,119.1390161588788
+
+{
+   "geocoded_waypoints" : [
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJF8qzUFGRlC0RksI6l_h_NuI",
+         "types" : [ "route" ]
+      },
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJUws3JVWRlC0Rvh18T0U_Exc",
+         "types" : [ "route" ]
+      }
+   ],
+   "routes" : [
+      {
+         "bounds" : {
+            "northeast" : {
+               "lat" : -3.479836,
+               "lng" : 119.1445322
+            },
+            "southwest" : {
+               "lat" : -3.4842172,
+               "lng" : 119.139115
+            }
+         },
+         "copyrights" : "Map data ©2020",
+         "legs" : [
+            {
+               "distance" : {
+                  "text" : "0.9 km",
+                  "value" : 945
+               },
+               "duration" : {
+                  "text" : "3 mins",
+                  "value" : 183
+               },
+               "end_address" : "Jl. Pelabuhan, Pappang, Campalagian, Kabupaten Polewali Mandar, Sulawesi Barat 91353, Indonesia",
+               "end_location" : {
+                  "lat" : -3.4840878,
+                  "lng" : 119.139115
+               },
+               "start_address" : "Jl. Ulama, Bonde, Campalagian, Kabupaten Polewali Mandar, Sulawesi Barat 91353, Indonesia",
+               "start_location" : {
+                  "lat" : -3.479836,
+                  "lng" : 119.1445322
+               },
+               "steps" : [
+                  {
+                     "distance" : {
+                        "text" : "42 m",
+                        "value" : 42
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 7
+                     },
+                     "end_location" : {
+                        "lat" : -3.4802128,
+                        "lng" : 119.1445124
+                     },
+                     "html_instructions" : "Head \u003cb\u003esouth\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "~sfTilevUb@Bd@?"
+                     },
+                     "start_location" : {
+                        "lat" : -3.479836,
+                        "lng" : 119.1445322
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.3 km",
+                        "value" : 285
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 49
+                     },
+                     "end_location" : {
+                        "lat" : -3.480291,
+                        "lng" : 119.1420399
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e",
+                     "maneuver" : "turn-right",
+                     "polyline" : {
+                        "points" : "hvfTelevUCJWnAIl@Iv@Ed@@b@?TJd@FXRz@Lj@Lb@"
+                     },
+                     "start_location" : {
+                        "lat" : -3.4802128,
+                        "lng" : 119.1445124
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.3 km",
+                        "value" : 344
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 62
+                     },
+                     "end_location" : {
+                        "lat" : -3.482354,
+                        "lng" : 119.1397351
+                     },
+                     "html_instructions" : "Continue straight",
+                     "maneuver" : "straight",
+                     "polyline" : {
+                        "points" : "xvfTw|dvUlBvB@@NNbBjBvAxA~@pA^h@"
+                     },
+                     "start_location" : {
+                        "lat" : -3.480291,
+                        "lng" : 119.1420399
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.2 km",
+                        "value" : 238
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 44
+                     },
+                     "end_location" : {
+                        "lat" : -3.4842172,
+                        "lng" : 119.1394133
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eJl. Pelabuhan\u003c/b\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "tcgTkndvUVQLOFMJIFCJFjAt@zE`A"
+                     },
+                     "start_location" : {
+                        "lat" : -3.482354,
+                        "lng" : 119.1397351
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "36 m",
+                        "value" : 36
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 21
+                     },
+                     "end_location" : {
+                        "lat" : -3.4840878,
+                        "lng" : 119.139115
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eDestination will be on the left\u003c/div\u003e",
+                     "maneuver" : "turn-right",
+                     "polyline" : {
+                        "points" : "jogTildvUGNQj@"
+                     },
+                     "start_location" : {
+                        "lat" : -3.4842172,
+                        "lng" : 119.1394133
+                     },
+                     "travel_mode" : "DRIVING"
+                  }
+               ],
+               "traffic_speed_entry" : [],
+               "via_waypoint" : []
+            }
+         ],
+         "overview_polyline" : {
+            "points" : "~sfTilevUb@Bd@?[zASdBEd@@b@?TJd@ZtAZnAnBxBjEtE~AzBVQLORWFCJFjAt@zE`AYz@"
+         },
+         "summary" : "Jl. Pelabuhan",
+         "warnings" : [],
+         "waypoint_order" : []
+      }
+   ],
+   "status" : "OK"
+}

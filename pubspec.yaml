@@ -1,0 +1,249 @@
+name: pelanggan
+description: A new Flutter project.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  material_design_icons_flutter:
+  flutter:
+    sdk: flutter
+
+  google_maps_flutter: ^0.5.30 #  ^0.5.25   0.5.21+1  0.5.21+8
+ 
+  # Add the following two lines
+  http: ^0.12.0+4  # 0.12.0+2   0.12.0+1  0.12.0+4
+  shared_preferences:
+  #json_serializable: ^2.0.2
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^0.1.3   #0.1.3 0.1.2
+  font_awesome_flutter: ^8.7.0 #8.7.0 8.2.0
+  
+  #solid_bottom_sheet: 0.1.9 
+  #scrollable_bottom_sheet: 0.2.1
+  sliding_up_panel: ^1.0.1
+  #flutter_map: ^0.8.2
+  #latlong: ^0.6.1
+  #cached_network_image: ^2.0.0
+  #unutk map 
+  #location: ^2.5.4  #3.0.2  2.3.5  2.5.4
+  geolocator: ^5.3.1
+  #geocoder: ^0.2.1
+  #untuk direction   
+  #google_map_polyline: ^0.2.0+1
+  #search_map_place: ^0.2.0
+
+
+  permission: ^0.1.7
+  #http untuk request url ke google
+  #dio: ^3.0.2
+
+ 
+  expandable_bottom_sheet: ^0.2.1+1
+  #firebase
+  firebase_messaging: ^6.0.16  #^6.0.13  ^6.0.15 
+  #fire store
+  #cloud_firestore: ^0.12.9+5 
+  cloud_firestore: ^0.13.4 #^0.13.5
+  #^0.13.5    
+  flutter_local_notifications: ^1.4.1 
+ 
+  #check internet
+  #connectivity: 0.4.4+1   #^0.4.2
+  connectivity: ^0.4.8+2  #^0.4.8+5
+
+
+  ##################################################
+  ##################################################
+  #kebutuhan dari chat cloud store
+  ##################################################
+  firebase_auth: ^0.16.0  #0.14.0+5
+  #google_sign_in: ^4.0.7
+  #cloud_firestore: ^0.12.9+5
+  fluttertoast: ^3.1.3
+  image_picker: ^0.6.1+8  #0.6.7
+  #shared_preferences: ^0.5.3+4
+  firebase_storage: ^3.0.6
+
+  cached_network_image: 2.0.0-rc.1
+  intl: ^0.15.7
+  #firebase_messaging: 6.0.13
+  #flutter_local_notifications: 1.4.0
+  photo_view: ^0.5.0
+  ##################################################
+  ##################################################
+
+  #uri launcer
+  url_launcher: ^5.4.5
+
+  #bad gas
+  badges: ^1.1.1
+
+  flutter_statusbarcolor: ^0.2.3
+
+  #graphql_flutter: ^3.0.1
+
+  #paging
+  flutter_paginator: ^0.0.6  
+ 
+  #webview_flutter 
+  webview_flutter: ^0.3.21
+
+  #share button
+  share: ^0.6.4+1
+
+  #launch_review: playstore
+  launch_review: ^2.0.0 
+
+  #flutter geo location by radius
+  geoflutterfire: ^2.1.0 
+ 
+  grouped_list: ^3.1.0   #belum difungsikan tapi ada kode terpakai
+ 
+  flutter_sticky_header: ^0.4.2
+
+  #sqflite
+  sqflite: any
+  path_provider: any
+
+  permission_handler: ^5.0.1 
+
+  #android inten digunakan sementara untuk memanggil intent
+  android_intent: ^0.3.7+3
+
+  #tes rethinkdb_dart
+  rethinkdb_dart: ^2.3.2+6
+
+  #membuka setting gps dan settingan lainnya
+  app_settings: ^4.0.3
+  
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets: 
+    - assets/icons/tabbawah/ 
+    - assets/icons/lain/ 
+    - assets/images/
+    - assets/images/bank/
+    - assets/car_icon.png
+    - assets/motor.png
+    - assets/icons/lain/lambai.jpg
+    - assets/icons/lain/udjust.jpg
+    - assets/tes.png 
+    - assets/img_gojek_logo.png 
+    - assets/icons/icon_menu.png 
+    - assets/icons/icon_saldo.png 
+    - assets/icons/icon_scan.png 
+    - assets/icons/icon_transfer.png  
+    - assets/images/food_1.jpg
+    - assets/images/food_2.jpg
+    - assets/images/food_3.jpg
+    - assets/images/food_4.jpg
+    - assets/images/food_5.jpg
+    - assets/images/promo_1.jpg
+    - assets/images/promo_2.jpg
+    - assets/images/promo_3.jpg
+    - assets/images/promo_4.jpg
+    - assets/images/no_inbox.png
+    #untuk chat
+    - assets/images/chat/img_not_available.jpeg
+    - assets/images/chat/wa.jpg
+    - assets/images/chat/mimi1.gif
+    - assets/images/chat/mimi2.gif
+    - assets/images/chat/mimi3.gif
+    - assets/images/chat/mimi4.gif
+    - assets/images/chat/mimi5.gif
+    - assets/images/chat/mimi6.gif
+    - assets/images/chat/mimi7.gif
+    - assets/images/chat/mimi8.gif
+    - assets/images/chat/mimi9.gif
+    #bank 
+    - assets/images/bank/bni.png
+    - assets/images/bank/bri.png
+    #bank
+    - assets/images/topup/topup.png 
+    #contoh
+    - assets/contohimages/burger.jpg
+    - assets/contohimages/cheesechilly.jpg
+    - assets/contohimages/noodles.jpg
+    - assets/contohimages/pizza.jpg
+    - assets/contohimages/hawkers.jpg
+    - assets/contohimages/bluehill.jpg
+    - assets/contohimages/pizzahut.jpg
+    - assets/contohimages/flipping.jpg
+    - assets/data.json
+    #no image
+    - assets/images/no_image/no_resto.jpg
+  # assets:
+  #   - images/a_dot_burr.jpeg
+  #   - images/a_dot_ham.jpeg
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware.
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  fonts:
+    - family: NeoSans
+      fonts:
+        - asset: assets/fonts/NeoSansStd-Regular.otf
+    - family: NeoSansBold
+      fonts:
+        - asset: assets/fonts/NeoSansStd-Bold.otf
+    - family: MaisonNeue
+      fonts:
+        - asset: assets/fonts/maison-neue-bold-italic.woff
+        - asset: assets/fonts/maison-neue-bold.woff
+        - asset: assets/fonts/maison-neue-book.woff
+        - asset: assets/fonts/maison-neue-light-italic.woff
+        - asset: assets/fonts/maison-neue-light.woff    
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages

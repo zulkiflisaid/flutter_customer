@@ -1,0 +1,145 @@
+void ModeRequestOrder() {
+    /*setState(() {
+      modeMap == 4;
+      _pc.hide();
+      _pc.close();
+      _start = 15; //30;5
+      _setText = 'Memanggil driver terdekat...!';
+      // minBottomMap  = 137;
+      _fabVisible = false;
+      visible_Shimmer = false;
+      visibleJemput = false;
+      visibleTujuan = false;
+      visible_distance_text = false;
+      visible_divider_buttom_jemput = false;
+      visible_divider_buttom_keterangan = false;
+      visible_divider_buttom_tujuan = false;
+      visibleTextKeterangan = false;
+      visibleButtonSet = false;
+      visible_button_order = false;
+      visible_harga_invalid = false;
+      visible_mode_bayar = false;
+
+      visibleHeaderJemput = true;
+      visible_animation_waiting_order = true;
+      visible_batalkan_pertama = false;
+    });
+
+    // await Future.delayed(Duration(milliseconds: 300));
+    setState(() {
+      _pc.show();
+      _pc.open();
+      maxHeight = 150;
+      minHeight = 150;
+      _fabHeight = 166;
+    });
+
+    _timer = Timer.periodic(Duration(seconds: 1), (time) {
+      //print('menungguuuuuuuuuu driver ModeRequestOrder');
+
+      if (_start < 1 || _start == 0) {
+        setState(() {
+          _start = 0;
+          _timer.cancel();
+          time.cancel();
+
+          if (habis_waktu_menunggu) {
+            _batalkanOrderPertama(documentIDNYA, '');
+
+            // Future.delayed(Duration(seconds:1));
+            _showGagalOrder(
+                'Opss gagal order...!',
+                'assets/images/para_ojek.png',
+                'Pasukan driver pada sibuk nihhh, silahkan ulangi order ya...!');
+            // Future.delayed(Duration(seconds:3));
+            _channgeModeLoadingAdress._modeReadyToOrder(true, '', "", 0);
+            visible_button_order = true;
+            visible_harga_invalid = false;
+            visible_animation_waiting_order = false;
+            setModeBayar(pay_categories);
+          }
+        });
+      } else {
+        setState(() {
+          _start = _start - 1;
+          habis_waktu_menunggu = true;
+        });
+      }
+    });
+ 
+    _checkKodeTambahOrder();
+    */
+  }
+
+  void ModeReseiveFalse(String judul_gagal_order) async {
+    /*
+    mode ini dimana orderan telah dikirim namun tidak mendapat balasan dari driver
+    maka distebut reseive false
+
+    */
+     /*
+    setState(() async {
+      _start = 0;
+      await _timer.cancel();
+      await Future.delayed(Duration(seconds: 1));
+
+      _showGagalOrder('Opss gagal order...!', 'assets/images/promo_1.jpg',
+          judul_gagal_order);
+      await Future.delayed(Duration(seconds: 1));
+      _channgeModeLoadingAdress._modeReadyToOrder(true, '', "", 0);
+
+      visible_button_order = true;
+      visible_harga_invalid = false;
+      visible_animation_waiting_order = false;
+      visible_batalkan_pertama = false;
+    });*/
+  }
+
+  void ModeReseiveTrue() {
+    /* 
+       mode ini dimana orderan telah diterima 
+       oleh driver dari balasan gcm driver atau 
+       mengambil langsung data orderan di server
+       
+      => maka navigasi dari ModeRequestOrder
+      => menuju navigasi tampilan order diterima
+    */
+   /*
+    print('mode order diterima');
+    setState(() {
+      modeMap == 5;
+      _pc.hide();
+      _pc.close();
+      _timer.cancel();
+      _start = 0;
+
+      visible_drag_icon = true;
+      visible_driver = true;
+      visible_order_batal = true;
+      visible_order_chat_telepon = true;
+      _fabVisible = false;
+      visible_distance_text = false;
+
+      visibleHeaderJemput = false;
+      visibleJemput = false;
+      visibleTujuan = false;
+      visibleTextKeterangan = false;
+      visibleButtonSet = false;
+      visible_button_order = false;
+      visible_harga_invalid = false;
+      visible_animation_waiting_order = false;
+      visible_batalkan_pertama = false;
+      visible_mode_bayar = false;
+      visible_Shimmer = false;
+      visible_divider_buttom_jemput = false;
+      visible_divider_buttom_keterangan = false;
+      visible_divider_buttom_tujuan = false;
+
+      //tampilan mam saat order dirima oleh driver
+      visible_marker_jemput = false;
+      visible_marker_tujuan = false;
+
+      maxHeight = 220;
+      minHeight = 145;
+    });*/
+  }

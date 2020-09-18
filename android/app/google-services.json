@@ -1,0 +1,370 @@
+{
+  "project_info": {
+    "project_number": "729034037434",
+    "firebase_url": "https://wide-plating-227823.firebaseio.com",
+    "project_id": "wide-plating-227823",
+    "storage_bucket": "wide-plating-227823.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:729034037434:android:fc32ccf3978de52e",
+        "android_client_info": {
+          "package_name": "com.master.zulkiflisaid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "729034037434-m8d669vu3lqvtqg5ru4khj6v70g45ubu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnB99-cvP5geYedbf7edkOdPcBHblMt98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "729034037434-f39e9u1es240g14dbvppfkdnk1h6i3jm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:729034037434:android:b6d0e6ecb2e379869cca83",
+        "android_client_info": {
+          "package_name": "com.pribumisoftware.gojek"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "729034037434-m8d669vu3lqvtqg5ru4khj6v70g45ubu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnB99-cvP5geYedbf7edkOdPcBHblMt98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "729034037434-f39e9u1es240g14dbvppfkdnk1h6i3jm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:729034037434:android:0a94921c922a92a5",
+        "android_client_info": {
+          "package_name": "com.thecodecity.mapsdirection"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "729034037434-m8d669vu3lqvtqg5ru4khj6v70g45ubu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnB99-cvP5geYedbf7edkOdPcBHblMt98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "729034037434-f39e9u1es240g14dbvppfkdnk1h6i3jm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:729034037434:android:8a39e539a94dccee",
+        "android_client_info": {
+          "package_name": "com.tutorial.authentication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "729034037434-ngoqpi2kmtq7qtfukq45t6j4g1su76cp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tutorial.authentication",
+            "certificate_hash": "c88afa6476d9b2d8beec7b6a5b41c77d4590360d"
+          }
+        },
+        {
+          "client_id": "729034037434-m8d669vu3lqvtqg5ru4khj6v70g45ubu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnB99-cvP5geYedbf7edkOdPcBHblMt98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "729034037434-f39e9u1es240g14dbvppfkdnk1h6i3jm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:729034037434:android:2bdf3586b01bcb71",
+        "android_client_info": {
+          "package_name": "com.tutorial.zulkiflisaid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "729034037434-m8d669vu3lqvtqg5ru4khj6v70g45ubu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnB99-cvP5geYedbf7edkOdPcBHblMt98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "729034037434-f39e9u1es240g14dbvppfkdnk1h6i3jm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:729034037434:android:dd793a7514d99d849cca83",
+        "android_client_info": {
+          "package_name": "ojekonline.zulkifli.com.driver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "729034037434-m8d669vu3lqvtqg5ru4khj6v70g45ubu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnB99-cvP5geYedbf7edkOdPcBHblMt98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "729034037434-f39e9u1es240g14dbvppfkdnk1h6i3jm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:729034037434:android:149a732b22a79207",
+        "android_client_info": {
+          "package_name": "ojekonline.zulkifli.com.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "729034037434-lu8uci1ui009krti7o6ulj8j91mct503.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ojekonline.zulkifli.com.myapplication",
+            "certificate_hash": "c88afa6476d9b2d8beec7b6a5b41c77d4590360d"
+          }
+        },
+        {
+          "client_id": "729034037434-m8d669vu3lqvtqg5ru4khj6v70g45ubu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnB99-cvP5geYedbf7edkOdPcBHblMt98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "729034037434-f39e9u1es240g14dbvppfkdnk1h6i3jm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:729034037434:android:d5125fc2be033b4b9cca83",
+        "android_client_info": {
+          "package_name": "ojekonline.zulkifli.com.ojek"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "729034037434-m8d669vu3lqvtqg5ru4khj6v70g45ubu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnB99-cvP5geYedbf7edkOdPcBHblMt98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "729034037434-f39e9u1es240g14dbvppfkdnk1h6i3jm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:729034037434:android:435e095021d99d89",
+        "android_client_info": {
+          "package_name": "ojekonline.zulkifli.com.ojekonline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "729034037434-eh0msomcgtissll75j7ipavnr4liltei.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ojekonline.zulkifli.com.ojekonline",
+            "certificate_hash": "c88afa6476d9b2d8beec7b6a5b41c77d4590360d"
+          }
+        },
+        {
+          "client_id": "729034037434-m8d669vu3lqvtqg5ru4khj6v70g45ubu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnB99-cvP5geYedbf7edkOdPcBHblMt98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "729034037434-f39e9u1es240g14dbvppfkdnk1h6i3jm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:729034037434:android:09cfb510c560e4f8",
+        "android_client_info": {
+          "package_name": "ojekonline.zulkifli.com.ojekonlinedriver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "729034037434-79butgi98cukrrr3vdq7ekoedln7dr80.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ojekonline.zulkifli.com.ojekonlinedriver",
+            "certificate_hash": "c88afa6476d9b2d8beec7b6a5b41c77d4590360d"
+          }
+        },
+        {
+          "client_id": "729034037434-m8d669vu3lqvtqg5ru4khj6v70g45ubu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnB99-cvP5geYedbf7edkOdPcBHblMt98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "729034037434-f39e9u1es240g14dbvppfkdnk1h6i3jm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:729034037434:android:edf7837175a0f59c",
+        "android_client_info": {
+          "package_name": "ojekonline.zulkifli.com.smsadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "729034037434-ifug89a77dcgsb989afsgdpbc9a21762.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ojekonline.zulkifli.com.smsadmin",
+            "certificate_hash": "c88afa6476d9b2d8beec7b6a5b41c77d4590360d"
+          }
+        },
+        {
+          "client_id": "729034037434-m8d669vu3lqvtqg5ru4khj6v70g45ubu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnB99-cvP5geYedbf7edkOdPcBHblMt98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "729034037434-f39e9u1es240g14dbvppfkdnk1h6i3jm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,133 @@
+{
+   "geocoded_waypoints" : [
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJ3aTJsTORlC0RFtV4y_mmnDE",
+         "types" : [ "route" ]
+      },
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJmZtNrLORlC0RNxYrUZ_QnJA",
+         "types" : [ "street_address" ]
+      }
+   ],
+   "routes" : [
+      {
+         "bounds" : {
+            "northeast" : {
+               "lat" : -3.4642427,
+               "lng" : 119.1410056
+            },
+            "southwest" : {
+               "lat" : -3.481429,
+               "lng" : 119.1390495
+            }
+         },
+         "copyrights" : "Map data ©2020",
+         "legs" : [
+            {
+               "distance" : {
+                  "text" : "2.1 km",
+                  "value" : 2128
+               },
+               "duration" : {
+                  "text" : "4 mins",
+                  "value" : 235
+               },
+               "end_address" : "Jl.Kancil No.14, Pappang, Campalagian, Kabupaten Polewali Mandar, Sulawesi Barat 91353, Indonesia",
+               "end_location" : {
+                  "lat" : -3.4812502,
+                  "lng" : 119.1410019
+               },
+               "start_address" : "Jl. Poros Majene - Mamuju, Campalagian, Kabupaten Polewali Mandar, Sulawesi Barat 91353, Indonesia",
+               "start_location" : {
+                  "lat" : -3.4642427,
+                  "lng" : 119.1407789
+               },
+               "steps" : [
+                  {
+                     "distance" : {
+                        "text" : "1.9 km",
+                        "value" : 1879
+                     },
+                     "duration" : {
+                        "text" : "3 mins",
+                        "value" : 175
+                     },
+                     "end_location" : {
+                        "lat" : -3.4805234,
+                        "lng" : 119.1390495
+                     },
+                     "html_instructions" : "Head \u003cb\u003esouth\u003c/b\u003e on \u003cb\u003eJl. Poros Majene - Mamuju\u003c/b\u003e toward \u003cb\u003eJl. Mesjid Raya\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "nrcT{tdvU~CVdDJpCLfDNhQ^pSUnBEbAE`@G\\KPMVWd@]ZK\\ID?R?z@@^D\\Hx@XRHrAl@lB`AVLp@d@`AX`Ch@FB|Cr@dCp@"
+                     },
+                     "start_location" : {
+                        "lat" : -3.4642427,
+                        "lng" : 119.1407789
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.2 km",
+                        "value" : 220
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 49
+                     },
+                     "end_location" : {
+                        "lat" : -3.481429,
+                        "lng" : 119.1408118
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "fxfTajdvUXw@\\s@Xw@Xs@@CRk@Tc@\\s@"
+                     },
+                     "start_location" : {
+                        "lat" : -3.4805234,
+                        "lng" : 119.1390495
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "29 m",
+                        "value" : 29
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 11
+                     },
+                     "end_location" : {
+                        "lat" : -3.4812502,
+                        "lng" : 119.1410019
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "|}fTaudvUc@e@"
+                     },
+                     "start_location" : {
+                        "lat" : -3.481429,
+                        "lng" : 119.1408118
+                     },
+                     "travel_mode" : "DRIVING"
+                  }
+               ],
+               "traffic_speed_entry" : [],
+               "via_waypoint" : []
+            }
+         ],
+         "overview_polyline" : {
+            "points" : "nrcT{tdvU~CVdDJxH\\hQ^pSUrDK~@Sh@e@d@]ZKb@InA@|@NlAb@`EnBhAr@bEbAdDv@dCp@Xw@\\s@Xw@Zw@h@oA\\s@c@e@"
+         },
+         "summary" : "Jl. Poros Majene - Mamuju",
+         "warnings" : [],
+         "waypoint_order" : []
+      }
+   ],
+   "status" : "OK"
+}

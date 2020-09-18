@@ -1,0 +1,371 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:cook4me/models/cuisinier/cuisinier.dart';
+import 'package:cook4me/service/menu/menu_service.dart';
+import 'package:cook4me/widgets/appbar/app_baar.dart';
+import 'package:cook4me/widgets/home_screen/categorie.dart';
+import 'package:cook4me/widgets/home_screen/kitchen_item.dart';
+import 'package:cook4me/widgets/searchbox/searchbox.dart';
+import 'package:flutter/material.dart';
+import 'package:geolocator/geolocator.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:rxdart/rxdart.dart';
+import 'package:geoflutterfire/geoflutterfire.dart';
+
+class HomeScreen extends StatefulWidget {
+  final String name;
+
+  HomeScreen({Key key, @required this.name}) : super(key: key);
+
+  @override
+  State<StatefulWidget> createState() {
+    return _HomeScreenState();
+  }
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  double longitude = 0.0;
+  double latitude = 0.0;
+  bool currentLocationloaded = false;
+  var radius = BehaviorSubject<double>.seeded(50.0);
+  Stream<List<DocumentSnapshot>> stream;
+  Geoflutterfire geo;
+  static LatLng initialPosition = LatLng(-3.47764787218, 119.141805461);
+  GeoFirePoint center;
+  //INIT
+  @override
+  void initState() {
+    super.initState();
+    getCurrentLocation();
+  }
+
+  @override
+  void dispose() {
+    radius.close();
+    super.dispose();
+  }
+
+  //GEOQUERY
+  List<Cuisinier> events = [];
+  List<Cuisinier> chefs = [];
+  List<DocumentSnapshot> docs = [];
+  Widget geoQuery() {
+    return Column(
+      children: <Widget>[
+        StreamBuilder(
+          stream: Firestore.instance
+              .collection('cuisinier')
+              .where('type', isEqualTo: 'professional')
+              .snapshots(),
+          builder:
+              (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+            if (snapshot.hasData) {
+              events = snapshot.data.documents
+                  .map((e) => Cuisinier.fromMap(e.data))
+                  .toList();
+
+              for (Cuisinier chef in events) {
+                var distance = 0.0;
+                var _latitude = chef.location.latitude;
+                var _longitude = chef.location.longitude;
+                var lat = center.latitude;
+                print('CENTERRR $lat');
+                distance = center.distance(lat: _latitude, lng: _longitude);
+                print('DISTANCCCEE $distance');
+
+                if (distance <= 6) {
+                  chefs.add(chef);
+                  print('CHEF ADEDDDED ');
+                }
+              }
+
+              List<String> list = [];
+
+              for (int i = 0; i < chefs.length; i++) {
+                // list.add(chefs[i].cuisinierId);
+                print('CHEFFF');
+                for (int j = 0; j < snapshot.data.documents.length; j++) {
+                  if (snapshot.data.documents[j]['cuisinierId'] ==
+                      chefs[i].cuisinierId) {
+                    print('FINDDDDD $i');
+                    print(snapshot.data.documents[j]['cuisinierId']);
+                    print(chefs[i].cuisinierId);
+                    if (!docs.contains(snapshot.data.documents[j])) {
+                      docs.add(snapshot.data.documents[j]);
+                    }
+                  }
+                }
+              }
+
+              /*for (int j = 0; j < snapshot.data.documents.length; j++) {
+                if (list[j] == snapshot.data.documents[j]['cuisinierId']) {}
+              }*/
+
+              return Flexible(
+                  child: ListView.builder(
+                itemCount: chefs.length,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) {
+                  return KitchenCard(document: docs[index]);
+                },
+              ));
+            } else {
+              return Center(child: CircularProgressIndicator());
+            }
+
+            /*events = snapshot.data
+                .map((doc) => Cuisinier.fromMap(doc.data))
+                .toList();*/
+            /*events.sort((a, b) {
+              var aDate = a.timestamp;
+              var bDate = b.timestamp;
+              return aDate.compareTo(bDate);
+            });*/
+            /*if (events.isEmpty) {
+              return Text("No events");
+            }
+            return Flexible(
+              child: ListView.builder(
+                itemCount: snapshot.data.length,
+                itemBuilder: (context, index) {
+                  DocumentSnapshot document = snapshot.data[index];
+                  return KitchenCard(document: document);
+                },
+              ),
+            );*/
+          },
+        )
+      ],
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+
+    return Scaffold(
+        appBar: homeAppBar(context),
+        backgroundColor: Colors.white,
+        body: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                child: Row(
+                  children: [],
+                ),
+              ),
+              Container(
+                child: SearchBox(),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                margin: EdgeInsets.only(right: 170.0),
+                child: Text("NOS CATEGORIES",
+                    style: TextStyle(
+                      letterSpacing: 1.5,
+                      fontSize: 14.0,
+                      fontFamily: 'Quicksand',
+                      fontWeight: FontWeight.bold,
+                    )),
+              ),
+              Container(
+                height: 130,
+                child: categoriesList(context),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                margin: EdgeInsets.only(right: 150),
+                child: Text("NOS PARTENAIRES",
+                    style: TextStyle(
+                      letterSpacing: 1.5,
+                      fontSize: 14.0,
+                      fontFamily: 'Quicksand',
+                      fontWeight: FontWeight.bold,
+                    )),
+              ),
+              new Container(
+                  //margin: EdgeInsets.only(right: 0),
+                  padding: EdgeInsets.only(right: 15),
+                  height: 250,
+                  child: geoQuery()),
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                margin: EdgeInsets.only(right: 170),
+                child: Text("SUR COMMANDE",
+                    style: TextStyle(
+                      letterSpacing: 1.5,
+                      fontSize: 14.0,
+                      fontFamily: 'Quicksand',
+                      fontWeight: FontWeight.bold,
+                    )),
+              ),
+              new Container(
+                  //margin: EdgeInsets.only(right: 0),
+                  padding: EdgeInsets.only(right: 15),
+                  height: 250,
+                  child: monoChefList(context)),
+            ],
+          ),
+        ));
+  }
+
+  MenuService service;
+  Widget chefList(BuildContext context) {
+    return StreamBuilder<QuerySnapshot>(
+        stream: service.getParks(),
+        /* Firestore.instance
+            .collection('cuisinier')
+            .where('type', isEqualTo: 'professional')
+            .snapshots(),*/
+        builder: (context, AsyncSnapshot<QuerySnapshot> snapshot) {
+          if (!snapshot.hasData)
+            return Center(child: CircularProgressIndicator());
+          else {
+            return new ListView.builder(
+              itemCount: snapshot.data.documents.length,
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) {
+                DocumentSnapshot document = snapshot.data.documents[index];
+                return KitchenCard(document: document);
+              },
+            );
+          }
+        });
+  }
+
+  Widget monoChefList(BuildContext context) {
+    return StreamBuilder<QuerySnapshot>(
+        stream: Firestore.instance
+            .collection('cuisinier')
+            .where('type', isEqualTo: 'particulier')
+            .snapshots(),
+        builder: (context, AsyncSnapshot<QuerySnapshot> snapshot) {
+          if (!snapshot.hasData)
+            return Center(child: CircularProgressIndicator());
+          else {
+            return new ListView.builder(
+              itemCount: snapshot.data.documents.length,
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) {
+                DocumentSnapshot document = snapshot.data.documents[index];
+                return KitchenCard(document: document);
+              },
+            );
+          }
+        });
+  }
+
+  Widget categoriesList(BuildContext context) {
+    return StreamBuilder<QuerySnapshot>(
+        stream: Firestore.instance.collection("categories").snapshots(),
+        builder: (context, AsyncSnapshot<QuerySnapshot> snapshot) {
+          if (!snapshot.hasData)
+            return Center(child: CircularProgressIndicator());
+          else {
+            return new ListView.builder(
+              itemCount: snapshot.data.documents.length,
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) {
+                DocumentSnapshot document = snapshot.data.documents[index];
+                return Categories(document: document);
+              },
+            );
+          }
+        });
+  }
+
+  Future<void> getCurrentLocation() async {
+    /* 
+   //  this is code before i edit
+    var currentLocationCoordinates = await Geolocator()
+        .getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
+    List<Placemark> place = await Geolocator().placemarkFromCoordinates(
+        currentLocationCoordinates.latitude,
+        currentLocationCoordinates.longitude);
+    geo = Geoflutterfire();
+
+    setState(() {
+      latitude = currentLocationCoordinates.latitude;
+      longitude = currentLocationCoordinates.longitude;
+      center = geo.point(latitude: latitude, longitude: longitude);
+
+      var cent = center.longitude;
+
+      currentLocationloaded = true;
+      print("Got location $currentLocationloaded");
+    });
+  }*/
+
+    if ((await Geolocator().isLocationServiceEnabled())) {
+      await Geolocator()
+          .getCurrentPosition(desiredAccuracy: LocationAccuracy.high)
+          .then((Position position) {
+        setState(() {
+          //get your location here
+          // if you want to open the settings you have to add a package
+          latitude = position.latitude;
+          longitude = position.longitude;
+          initialPosition = LatLng(position.latitude, position.longitude);
+          // print("Got location $latitude");
+          //print("Got location $longitude");
+        });
+
+        //show location variable here
+      }).catchError((e) {
+        showDialog(
+            barrierDismissible: false,
+            context: context,
+            builder: (BuildContext context) {
+              return AlertDialog(
+                title: Text("Cannot display location"),
+                content: const Text(
+                    'Make sure you are connected to the internet then try again'),
+                actions: <Widget>[
+                  FlatButton(
+                      child: Text('Ok'),
+                      onPressed: () {
+                        Navigator.of(context, rootNavigator: true).pop();
+                        // Navigator.pop(context);
+                      })
+                ],
+              );
+            }).whenComplete(() {
+          Navigator.pop(context);
+        });
+      });
+    } else {
+      if (Theme.of(context).platform == TargetPlatform.android) {
+        showDialog(
+            barrierDismissible: false,
+            context: context,
+            builder: (BuildContext context) {
+              return AlertDialog(
+                title: Text("Cannot display location"),
+                content: const Text('Make sure you enable GPS and try again'),
+                actions: <Widget>[
+                  FlatButton(
+                      child: Text('Ok'),
+                      onPressed: () {
+                        Navigator.of(context, rootNavigator: true).pop();
+                        // Navigator.pop(context);
+                      })
+                ],
+              );
+            }).whenComplete(() {
+          Navigator.pop(context);
+        });
+      }
+    }
+  }
+}
