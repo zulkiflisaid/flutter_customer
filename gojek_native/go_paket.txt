@@ -1,3 +1,0 @@
-go get -u github.com/go-sql-driver/mysql
-go get -u gopkg.in/go-playground/validator.v9
-go get -u github.com/dgrijalva/jwt-go

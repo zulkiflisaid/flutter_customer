@@ -1,3 +1,0 @@
-1. memblok user yang membatalkan transaksi selama sebulan lebih dari 25 kali
-2. setiap sebulan mengecek kembali kas bank dengan saldo semua pengguna
-3. membackup/memindahkan semua data transaksi setiap sebulan terakhir
